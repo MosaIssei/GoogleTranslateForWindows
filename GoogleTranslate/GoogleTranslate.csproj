@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <ApplicationIcon>icons8_google_translate_1.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icons8_google_translate_1.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icons8_google_translate_1.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CefSharp.Common.NETCore" Version="104.4.240" />
+    <PackageReference Include="CefSharp.Wpf.NETCore" Version="104.4.240" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icons8_google_translate_1.ico" />
+  </ItemGroup>
+
+</Project>

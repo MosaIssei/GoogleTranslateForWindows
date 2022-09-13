@@ -1,0 +1,120 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="TabRadioButton"
+           TargetType="{x:Type RadioButton}">
+
+        <Setter Property="FontFamily"
+                Value="{StaticResource Vazir RD Vazir RD Medium}" />
+
+        <Setter Property="FontWeight"
+                Value="Medium" />
+
+        <Setter Property="FontSize"
+                Value="{DynamicResource FontSizeMedium}" />
+
+        <Setter Property="HorizontalAlignment"
+                Value="Stretch" />
+
+        <Setter Property="VerticalAlignment"
+                Value="Stretch" />
+
+        <Setter Property="Background"
+                Value="Transparent" />
+
+        <Setter Property="Foreground"
+                Value="{DynamicResource PrimaryTextColor}" />
+
+        <Setter Property="BorderThickness"
+                Value="0" />
+
+        <Setter Property="SnapsToDevicePixels"
+                Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2" />
+                            </Grid.RowDefinitions>
+                            <Border Margin="10 0"
+                                    VerticalAlignment="Center">
+                                <ContentPresenter x:Name="contentPresenter"
+                                                  Focusable="False"
+                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                  RecognizesAccessKey="True"
+                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+
+                            </Border>
+                            <Border Height="2"
+                                    x:Name="DownShow"
+                                    Background="{DynamicResource PrimaryForgroundChekedColor}"
+                                    Visibility="Hidden"
+                                    Grid.Row="1" />
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasContent"
+                                 Value="true">
+
+                            <Setter Property="Padding"
+                                    Value="4,-1,0,0" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="true">
+
+                            <Setter Property="Background"
+                                    Value="{DynamicResource PrimaryBackgroundMouseOverColor}" />
+                            <Setter Property="BorderBrush"
+                                    Value="{DynamicResource PrimaryBorderMouseOverColor}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled"
+                                 Value="false">
+                            <Setter Property="Background"
+                                    Value="{DynamicResource PrimaryBackgroundDisabledColor}" />
+                            <Setter Property="BorderBrush"
+                                    Value="{DynamicResource PrimaryBorderDisabledColor}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                                 Value="true">
+                            <Setter Property="Background"
+                                    Value="{DynamicResource PrimaryBackgroundPressedColor}" />
+                            <Setter Property="BorderBrush"
+                                    Value="{DynamicResource PrimaryBorderPressedColor}" />
+
+                        </Trigger>
+                        <Trigger Property="IsChecked"
+                                 Value="true">
+                            <Setter TargetName="DownShow"
+                                    Property="Visibility"
+                                    Value="Visible" />
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource PrimaryForgroundChekedColor}" />
+                            <Setter Property="Opacity"
+                                    Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsChecked"
+                                 Value="False">
+                            <Setter TargetName="DownShow"
+                                    Property="Visibility"
+                                    Value="Hidden" />
+                        </Trigger>
+                        <Trigger Property="IsChecked"
+                                 Value="{x:Null}">
+                            <Setter Property="Opacity"
+                                    Value="0.56" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,73 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Colors -->
+
+    <!-- Background Colors -->
+    <SolidColorBrush x:Key="PrimaryBackgroundColor"
+                     Color="#FFFFFF" />
+    <SolidColorBrush x:Key="SecundaryBackgroundColor"
+                     Color="#F3F5F9" />
+
+    <!-- MouseOver Colors -->
+    <Color x:Key="PrimaryBackgroundMouseOverColor">#ebe7e2</Color>
+    <SolidColorBrush x:Key="PrimaryBackgroundMouseOverSolidColor"
+                     Color="{DynamicResource PrimaryBackgroundMouseOverColor}" />
+    <Color x:Key="PrimaryBorderMouseOverColor">#e3e3da</Color>
+    <SolidColorBrush x:Key="PrimaryBorderMouseOverSolidColor"
+                     Color="{DynamicResource PrimaryBorderMouseOverColor}" />
+    <SolidColorBrush x:Key="PrimaryForgroundMouseOverColor"
+                     Color="#1C1C25" />
+
+    <!-- Pressed Colors -->
+    <Color x:Key="PrimaryBackgroundPressedColor">#cfcecb</Color>
+    <SolidColorBrush x:Key="PrimaryBackgroundPressedSolidColor"
+                     Color="{DynamicResource PrimaryBackgroundPressedColor}" />
+    <SolidColorBrush x:Key="PrimaryBorderPressedColor"
+                     Color="#cfcecb" />
+    <SolidColorBrush x:Key="PrimaryForgroundPressedColor"
+                     Color="#1C1C25" />
+
+    <!-- Disabled Colors -->
+    <SolidColorBrush x:Key="PrimaryBackgroundDisabledColor"
+                     Color="#14181D" />
+    <SolidColorBrush x:Key="PrimaryBorderDisabledColor"
+                     Color="#1C1C25" />
+    <SolidColorBrush x:Key="PrimaryForgroundDisabledColor"
+                     Color="#1C1C25" />
+
+    <!-- Cheked Colors -->
+    <SolidColorBrush x:Key="PrimaryBackgroundChekedColor"
+                     Color="#14181D" />
+    <SolidColorBrush x:Key="PrimaryBorderChekedColor"
+                     Color="#1C1C25" />
+    <SolidColorBrush x:Key="PrimaryForgroundChekedColor"
+                     Color="#0092c9" />
+
+    <!-- Primary Colors -->
+    <SolidColorBrush x:Key="PrimaryBlueColor"
+                     Color="#496FFF" />
+    <SolidColorBrush x:Key="PrimaryGrayColor"
+                     Color="#64677A" />
+
+    <!-- Secundary Colors -->
+    <SolidColorBrush x:Key="SecundaryBlueColor"
+                     Color="#496FFF" />
+    <SolidColorBrush x:Key="SecundaryGrayColor"
+                     Color="#CECECE" />
+
+    <!-- Tertiary Colors -->
+    <SolidColorBrush x:Key="TertiaryBlueColor"
+                     Color="#C2D1FC" />
+
+    <!-- BorderBrush Colors -->
+    <SolidColorBrush x:Key="BorderBrushColor"
+                     Color="#dfe1e5" />
+
+    <!-- Text Colors -->
+    <SolidColorBrush x:Key="PrimaryTextColor"
+                     Color="#202124" />
+    <SolidColorBrush x:Key="SecundaryTextColor"
+                     Color="#000000" />
+
+</ResourceDictionary>

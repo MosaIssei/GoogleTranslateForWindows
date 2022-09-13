@@ -1,0 +1,210 @@
+﻿<Window x:Class="WindowGoogleTranslate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowGoogleTranslate"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        Title="MainWindow"
+        MinHeight="450"
+        Background="{DynamicResource PrimaryBackgroundColor}"
+        MinWidth="600">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <DockPanel>
+            <Border DockPanel.Dock="Top"
+                    HorizontalAlignment="Right"
+                    Margin="5"
+                    Background="{DynamicResource SecundaryBackgroundColor}"
+                    Style="{StaticResource CardBorderStyle}">
+
+                <StackPanel Orientation="Horizontal">
+                    <ToggleButton x:Name="tbDark"
+                                  Content="DarkMode"
+                                  Margin="0 0 10 0"
+                                  Style="{DynamicResource ToggleButtonStyle}"
+                                  Checked="ToggleButton_Checked"
+                                  Unchecked="ToggleButton_Unchecked" />
+                    <TextBlock Text="DarkMode"
+                               Foreground="{DynamicResource PrimaryTextColor}" />
+                </StackPanel>
+
+            </Border>
+            <TextBlock DockPanel.Dock="Top"
+                       Text="Google"
+                       Foreground="{DynamicResource SecundaryTextColor}"
+                       FontSize="{DynamicResource FontSizeBigTitle}"
+                       HorizontalAlignment="Center"
+                       Margin="10"
+                       FontFamily="Arial"
+                       FontWeight="Bold" />
+            <Grid DockPanel.Dock="Top">
+                <Border Margin="20"
+                        MaxWidth="1400"
+                        x:Name="BackBorder"
+                        CornerRadius="8"
+                        BorderThickness="1"
+                        BorderBrush="{DynamicResource BorderBrushColor}"
+                        Background="{DynamicResource PrimaryBackgroundColor}" />
+
+                <Border Margin="20"
+                        MaxWidth="1400"
+                        x:Name="MainBorder"
+                        CornerRadius="8"
+                        BorderThickness="1"
+                        BorderBrush="{DynamicResource BorderBrushColor}"
+                        Background="{DynamicResource PrimaryBackgroundColor}">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="6"
+                                          ShadowDepth="0.5"
+                                          Color="Gray"
+                                          Direction="-90" />
+
+                    </Border.Effect>
+                    <Grid>
+                        <Grid.OpacityMask>
+                            <VisualBrush Visual="{Binding ElementName=BackBorder}" />
+                        </Grid.OpacityMask>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="Auto"
+                                           MinHeight="100" />
+                            <RowDefinition Height="60" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Border BorderBrush="{DynamicResource BorderBrushColor}"
+                                CornerRadius="0 0 0 8"
+                                BorderThickness="0 1 0 0"
+                                Grid.Column="0"
+                                Grid.RowSpan="2"
+                                Grid.Row="1" />
+
+                        <Border BorderBrush="{DynamicResource BorderBrushColor}"
+                                CornerRadius="0 0 8 0"
+                                BorderThickness="1 1 0 0"
+                                Grid.Column="1"
+                                Grid.RowSpan="2"
+                                Grid.Row="1" />
+
+                        <Border CornerRadius="0 0 8 0"
+                                BorderThickness="0"
+                                x:Name="TranslateBack"
+                                Visibility="Collapsed"
+                                Grid.Column="1"
+                                Opacity="0.4"
+                                Grid.RowSpan="2"
+                                Background="{DynamicResource BorderBrushColor}"
+                                Grid.Row="1" />
+
+                        <Grid Grid.Column="0"
+                              Grid.Row="0"
+                              Grid.ColumnSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Border Style="{StaticResource CardBorderStyle}"
+                                    CornerRadius="100"
+                                    Width="50"
+                                    Height="50"
+                                    Margin="10 0"
+                                    Grid.Column="1">
+                                <Path Data="{StaticResource SwapArrowsHorizontal}"
+                                      Fill="{DynamicResource SecundaryTextColor}"
+                                      Stretch="Uniform" />
+                            </Border>
+
+                            <StackPanel Orientation="Horizontal"
+                                        Grid.Column="0">
+                                <RadioButton Content="DETECT LANGUAGE"
+                                             x:Name="rbAuto"
+                                             IsChecked="True"
+                                             GroupName="SourceLan"
+                                             Tag="auto"
+                                             Style="{StaticResource TabRadioButton}"
+                                             Checked="Source_Checked" />
+                                <ItemsControl x:Name="ItemsLanSourc" >
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                
+                                            </StackPanel>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <RadioButton Content="{Binding LanguageName}"
+                                                         x:Name="rbAuto"
+                                                         GroupName="SourceLan"
+                                                         Tag="{Binding LanguageCode}"
+                                                         Style="{StaticResource TabRadioButton}"
+                                                         Checked="Source_Checked" />
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+
+                            <ScrollViewer Grid.Column="2"
+                                          VerticalScrollBarVisibility="Disabled"
+                                          HorizontalScrollBarVisibility="Hidden">
+                                <StackPanel  Margin="0"
+                                             Orientation="Horizontal">
+
+
+
+                                    <RadioButton Content="PERSIAN"
+                                                 Style="{StaticResource TabRadioButton}"
+                                                 IsChecked="True"
+                                                 Checked="Translate_Checked" />
+
+                                    <RadioButton Content="ENGLISH"
+                                                 Style="{StaticResource TabRadioButton}"
+                                                 Checked="Translate_Checked" />
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Grid>
+
+
+                        <RichTextBox Grid.Row="1"
+                                     TextChanged="txtSource_TextChanged"
+                                     BorderThickness="0"
+                                     Background="Transparent"
+                                     x:Name="txtSource"
+                                     Margin="15">
+                            <RichTextBox.Resources>
+                                <Style TargetType="{x:Type Paragraph}">
+                                    <Setter Property="Margin"
+                                            Value="0" />
+                                </Style>
+                            </RichTextBox.Resources>
+                        </RichTextBox>
+
+                        <RichTextBox Grid.Row="1"
+                                     Grid.Column="1"
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     x:Name="txtResult"
+                                     FlowDirection="RightToLeft"
+                                     IsReadOnly="True"
+                                     Margin="15">
+                            <RichTextBox.Resources>
+                                <Style TargetType="{x:Type Paragraph}">
+                                    <Setter Property="Margin"
+                                            Value="0" />
+                                </Style>
+                            </RichTextBox.Resources>
+                        </RichTextBox>
+                    </Grid>
+
+                </Border>
+            </Grid>
+
+            <StackPanel></StackPanel>
+        </DockPanel>
+    </ScrollViewer>
+</Window>

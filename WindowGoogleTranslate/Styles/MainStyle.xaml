@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Styles/SizeDisctionary.xaml" />
+        <ResourceDictionary Source="/Styles/FontDictionary.xaml" />
+        <ResourceDictionary Source="/Asset/IconsDictionary.xaml" />
+        <ResourceDictionary Source="/Styles/RichTextBoxStyles.xaml" />
+        <ResourceDictionary Source="/Styles/RadioButtonStyles.xaml" />
+        <ResourceDictionary Source="/Styles/BorderStyles.xaml" />
+        <ResourceDictionary Source="/Styles/ToggleButtonStyles.xaml" />
+		<ResourceDictionary Source="/Styles/ButtonsStyles.xaml"/>
+        
+        
+        
+        
+        
+        
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <Style TargetType="{x:Type RichTextBox}"
+           BasedOn="{StaticResource BaseRichText}" />
+
+
+
+</ResourceDictionary>

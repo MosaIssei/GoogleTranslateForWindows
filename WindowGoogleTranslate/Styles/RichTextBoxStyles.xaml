@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Style TargetType="{x:Type RichTextBox}" x:Key="BaseRichText">
+        <Setter Property="FontFamily"
+                Value="{StaticResource Vazir RD}" />
+        
+        <Setter Property="FontSize"
+                Value="{DynamicResource FontSizeXLarge}" />
+        
+        <Setter Property="CaretBrush"
+                Value="{DynamicResource PrimaryTextColor}" />
+
+        <Setter Property="Foreground"
+                Value="{DynamicResource PrimaryTextColor}" />
+    </Style>
+</ResourceDictionary>

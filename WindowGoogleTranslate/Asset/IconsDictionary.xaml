@@ -1,0 +1,103 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <PathGeometry x:Key="Check"
+                  Figures="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.3 7.61l-4.57 6a1 1 0 0 1-.79.39 1 1 0 0 1-.79-.38l-2.44-3.11a1 1 0 0 1 1.58-1.23l1.63 2.08 3.78-5a1 1 0 1 1 1.6 1.22z" />
+    <PathGeometry x:Key="SwapArrowsHorizontal"
+                  Figures="M106.2,72.9C105,71.7 103.10000000000001,71.7 102,72.9 100.8,74.10000000000001 100.8,76 102,77.10000000000001L116.8,92 36,92C34.3,92 33,93.3 33,95 33,96.7 34.3,98 36,98L116.8,98 101.89999999999999,112.9C100.69999999999999,114.10000000000001 100.69999999999999,116 101.89999999999999,117.10000000000001 102.49999999999999,117.7 103.3,118.00000000000001 103.99999999999999,118.00000000000001 104.69999999999997,118.00000000000001 105.49999999999999,117.70000000000002 106.09999999999998,117.10000000000001L126.09999999999998,97.10000000000001C127.29999999999998,95.9,127.29999999999998,94.00000000000001,126.09999999999998,92.9L106.2,72.9z M95.1,35C95.1,33.3,93.8,32,92.1,32L11.2,32 26.1,17.1C27.3,15.900000000000002 27.3,14.000000000000002 26.1,12.900000000000002 24.900000000000002,11.700000000000003 23,11.700000000000003 21.900000000000002,12.900000000000002L1.9000000000000021,32.900000000000006C0.7000000000000022,34.10000000000001,0.7000000000000022,36.00000000000001,1.9000000000000021,37.10000000000001L21.900000000000002,57.10000000000001C22.500000000000004,57.70000000000001 23.3,58.00000000000001 24.000000000000004,58.00000000000001 24.700000000000006,58.00000000000001 25.500000000000004,57.70000000000001 26.100000000000005,57.10000000000001 27.300000000000004,55.900000000000006 27.300000000000004,54.00000000000001 26.100000000000005,52.900000000000006L11.2,38 92,38C93.7,38,95.1,36.7,95.1,35z" />
+    <PathGeometry x:Key="CopyPath"
+                  Figures="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z" />
+    <PathGeometry x:Key="window-close"
+                  Figures="M175 175C184.4 165.7 199.6 165.7 208.1 175L255.1 222.1L303 175C312.4 165.7 327.6 165.7 336.1 175C346.3 184.4 346.3 199.6 336.1 208.1L289.9 255.1L336.1 303C346.3 312.4 346.3 327.6 336.1 336.1C327.6 346.3 312.4 346.3 303 336.1L255.1 289.9L208.1 336.1C199.6 346.3 184.4 346.3 175 336.1C165.7 327.6 165.7 312.4 175 303L222.1 255.1L175 208.1C165.7 199.6 165.7 184.4 175 175V175zM0 96C0 60.65 28.65 32 64 32H448C483.3 32 512 60.65 512 96V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V96zM48 96V416C48 424.8 55.16 432 64 432H448C456.8 432 464 424.8 464 416V96C464 87.16 456.8 80 448 80H64C55.16 80 48 87.16 48 96z" />
+    <PathGeometry x:Key="Close"
+                  Figures="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
+    <PathGeometry x:Key="Minimize"
+                  Figures="M32 416c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H32z" />
+    <PathGeometry x:Key="Maximize"
+                  Figures="M7.724 65.49C13.36 55.11 21.79 46.47 32 40.56C39.63 36.15 48.25 33.26 57.46 32.33C59.61 32.11 61.79 32 64 32H448C483.3 32 512 60.65 512 96V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V96C0 93.79 .112 91.61 .3306 89.46C1.204 80.85 3.784 72.75 7.724 65.49V65.49zM48 416C48 424.8 55.16 432 64 432H448C456.8 432 464 424.8 464 416V224H48V416z" />
+    <DrawingImage x:Key="GoogleTranslate">
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Children>
+                    <DrawingGroup>
+                        <DrawingGroup.Children>
+                            <GeometryDrawing Brush="#FFCFD8DC"
+                                             Pen="{x:Null}">
+                                <GeometryDrawing.Geometry>
+                                    <PathGeometry FillRule="Nonzero"
+                                                  Figures="M15,13L40,13C41.104,13,42,13.896,42,15L42,40C42,41.104,41.104,42,40,42L26,42 15,13z" />
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                            <GeometryDrawing Brush="#FF546E7A"
+                                             Pen="{x:Null}">
+                                <GeometryDrawing.Geometry>
+                                    <PathGeometry FillRule="Nonzero"
+                                                  Figures="M26.832,34.854L25.916,33.077999999999996 26.805,32.61899999999999C26.866,32.587999999999994,32.906,29.410999999999994,35.848,23.514999999999993L36.294,22.619999999999994 38.083999999999996,23.512999999999995 37.63699999999999,24.407999999999994C34.395999999999994,30.903999999999996,27.991999999999994,34.257999999999996,27.720999999999993,34.39699999999999L26.832,34.854z" />
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                            <GeometryDrawing Brush="#FF546E7A"
+                                             Pen="{x:Null}">
+                                <GeometryDrawing.Geometry>
+                                    <PathGeometry FillRule="Nonzero"
+                                                  Figures="M38.019,34L37.149,33.51C36.942,33.394,32.057,30.608999999999998,28.653,25.842999999999996L30.279999999999998,24.680999999999997C33.419,29.074999999999996,38.084999999999994,31.741999999999997,38.131,31.767999999999997L39,32.26 38.019,34z M26,22L40,22 40,24 26,24z" />
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                            <GeometryDrawing Brush="#FF546E7A"
+                                             Pen="{x:Null}">
+                                <GeometryDrawing.Geometry>
+                                    <PathGeometry FillRule="Nonzero"
+                                                  Figures="M32,20L34,20 34,24 32,24z" />
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                            <GeometryDrawing Brush="#FF2196F3"
+                                             Pen="{x:Null}">
+                                <GeometryDrawing.Geometry>
+                                    <PathGeometry FillRule="Nonzero"
+                                                  Figures="M33,35L8,35C6.896,35,6,34.104,6,33L6,8C6,6.896,6.896,6,8,6L22,6 33,35z" />
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                            <GeometryDrawing Brush="#FF3F51B5"
+                                             Pen="{x:Null}">
+                                <GeometryDrawing.Geometry>
+                                    <PathGeometry FillRule="Nonzero"
+                                                  Figures="M26,42L23,35 33,35z" />
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                            <GeometryDrawing Brush="#FFFFFFFF"
+                                             Pen="{x:Null}">
+                                <GeometryDrawing.Geometry>
+                                    <PathGeometry FillRule="Nonzero"
+                                                  Figures="M19.172,24L14.812000000000001,24 13.804000000000002,27 11,27 15.764,14 18.208,14 23,27 20.195,27 19.172,24z M15.444,22L18.545,22 16.986,17.286 15.444,22z" />
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                        </DrawingGroup.Children>
+                        <DrawingGroup.ClipGeometry>
+                            <RectangleGeometry Rect="0,0,48,48" />
+                        </DrawingGroup.ClipGeometry>
+                    </DrawingGroup>
+                </DrawingGroup.Children>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    <DrawingImage x:Key="Copy">
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Children>
+                    <DrawingGroup>
+                        <DrawingGroup.Children>
+                            <GeometryDrawing Brush="{DynamicResource PrimaryBackgroundColor}"
+                                             Pen="{x:Null}">
+                                <GeometryDrawing.Geometry>
+                                    <PathGeometry FillRule="Nonzero"
+                                                  Figures="M18.5,5C15.480226,5,13,7.4802259,13,10.5L13,32.5C13,35.519774,15.480226,38,18.5,38L34.5,38C37.519774,38,40,35.519774,40,32.5L40,10.5C40,7.4802259,37.519774,5,34.5,5L18.5,5z M18.5,8L34.5,8C35.898226,8,37,9.1017741,37,10.5L37,32.5C37,33.898226,35.898226,35,34.5,35L18.5,35C17.101774,35,16,33.898226,16,32.5L16,10.5C16,9.1017741,17.101774,8,18.5,8z M11,10L9.78125,10.8125C8.66825,11.5545,8,12.803625,8,14.140625L8,33.5C8,38.747,12.253,43,17.5,43L30.859375,43C32.197375,43,33.4465,42.33175,34.1875,41.21875L35,40 17.5,40C13.91,40,11,37.09,11,33.5L11,10z" />
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                        </DrawingGroup.Children>
+                        <DrawingGroup.ClipGeometry>
+                            <RectangleGeometry Rect="0,0,48,48" />
+                        </DrawingGroup.ClipGeometry>
+                    </DrawingGroup>
+                </DrawingGroup.Children>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+</ResourceDictionary>

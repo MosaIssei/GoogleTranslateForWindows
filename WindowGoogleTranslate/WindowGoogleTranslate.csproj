@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>icons8_google_translate_1.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Asset\LanguageCode.json" />
+    <None Remove="Asset\RTLLanguage.json" />
+    <None Remove="Fonts\Vazirmatn-RD-Black.ttf" />
+    <None Remove="Fonts\Vazirmatn-RD-Bold.ttf" />
+    <None Remove="Fonts\Vazirmatn-RD-ExtraBold.ttf" />
+    <None Remove="Fonts\Vazirmatn-RD-ExtraLight.ttf" />
+    <None Remove="Fonts\Vazirmatn-RD-Light.ttf" />
+    <None Remove="Fonts\Vazirmatn-RD-Medium.ttf" />
+    <None Remove="Fonts\Vazirmatn-RD-Regular.ttf" />
+    <None Remove="Fonts\Vazirmatn-RD-SemiBold.ttf" />
+    <None Remove="Fonts\Vazirmatn-RD-Thin.ttf" />
+    <None Remove="icons8_google_translate_1.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Asset\IconsDictionary.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icons8_google_translate_1.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Asset\IconsDictionary.xaml" />
+    <Content Include="Asset\LanguageCode.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\RTLLanguage.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Fonts\Vazirmatn-RD-Black.ttf" />
+    <Resource Include="Fonts\Vazirmatn-RD-Bold.ttf" />
+    <Resource Include="Fonts\Vazirmatn-RD-ExtraBold.ttf" />
+    <Resource Include="Fonts\Vazirmatn-RD-ExtraLight.ttf" />
+    <Resource Include="Fonts\Vazirmatn-RD-Light.ttf" />
+    <Resource Include="Fonts\Vazirmatn-RD-Medium.ttf" />
+    <Resource Include="Fonts\Vazirmatn-RD-Regular.ttf" />
+    <Resource Include="Fonts\Vazirmatn-RD-SemiBold.ttf" />
+    <Resource Include="Fonts\Vazirmatn-RD-Thin.ttf" />
+    <Resource Include="icons8_google_translate_1.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Strings\" />
+    <Folder Include="UserControls\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+
+</Project>
